@@ -1,18 +1,29 @@
-# Overview
+<!-- # Overview -->
+# 概要
 
+<!--
 Welcome to Chef Fundamentals. This is the source training material
 repository for the class. The materials themselves are written in
 plain text "[Markdown](http://daringfireball.net/projects/markdown/)"
 format, and presented using the
 "[ShowOff](https://github.com/schacon/showoff)" Ruby-based presentation
 application.
+-->
 
+Chefの基礎ドキュメントにようこそ。これは、トレーニングクラスで使用するマテリアルのソースです。マテリアルは、プレーンテキスト"[Markdown](http://daringfireball.net/projects/markdown/)"のフォーマットで記述し、"[ShowOff](https://github.com/schacon/showoff)"という Ruby-based プレゼンアプリケーションで表示しています。
+
+<!--
 If you're seeing this at http://localhost:9090, you need to run the
 `showoff` command from the `slides` directory.
+-->
 
-# Setup
+もしもこのページがhttp://localhost:9090にアクセスして見えているなら、`showoff`コマンドを`slides`ディレクトリで実行してください。
 
-Requirements:
+<!-- # Setup -->
+#セットアップ
+
+<!-- Requirements: -->
+必要条件：
 
 * Ruby 1.8.7+
 * RubyGems 1.3.7+
@@ -42,7 +53,8 @@ with the presenter window. To move forward and back, use the arrow
 keys. Down/Right go forward, Up/Left go backward. Spacebar will also
 advance slides forward.
 
-# Installed Gems
+<!-- # Installed Gems -->
+# Gemのインストール
 
 The source materials in the `slides` directory are set up as a showoff
 project. As such, the `showoff` gem is required. In order to generate
@@ -57,7 +69,8 @@ so those gems are included as well.
   requests adding features that we liked, so the showoff gem is
   installed from a separate repository.
 
-# Slides Directory
+<!-- # Slides Directory -->
+# Slideのディレクトリ
 
 Most of the action happens in the slides directory.
 
@@ -74,7 +87,8 @@ This does not add the section to `showoff.json`. When contributing a new
 section, do not add it to the `showoff.json` file, as that should be
 reviewed before modifying the base course for everyone.
 
-## Slide Style Guide
+<!-- ## Slide Style Guide -->
+## Slideのスタイルに関するガイド
 
 This is spartan and will be embellished.
 
@@ -84,7 +98,8 @@ This is spartan and will be embellished.
 * Each directory should have a 01_slide.md, multiple sections may be
   broken up later.
 
-# Guides Directory
+<!-- # Guides Directory -->
+# Guideのディレクトリ
 
 See the `instructor-setup.md` guide in the guides directory for
 information on how to set up the lab environments for students to use
@@ -105,8 +120,11 @@ these materials.
 See LICENSE for licensing of these materials and how you may use
 them.
 
-## Authors:
-
+<!-- ## Authors: -->
+## 著者:
 * Joshua Timberman <joshua@opscode.com>
 * Aaron Peterson <aaron@opscode.com>
 * Stephen Nelson-Smith <stephen@atalanta-systems.com>
+
+## 翻訳:
+* Naotaka Jay Hott <j-hotta@cereationline.com>
