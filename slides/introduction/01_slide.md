@@ -43,85 +43,41 @@ California, 94105, USA.
 * Chefやサーバ設定にかんする経験
 * コースのゴール
 
-<!--
-# Course Objectives
-
-* Understand Chef's tools and architecture
-* Obtain, create and modify cookbooks
-* Work with the Chef Server API
-* Understand common patterns used by Opscode
-* Understand Opscode's products
-
-Chef is a complex system and we could spend 2 weeks on it and not
-cover everything. This course aims to teach students the fundamentals
-and most important topics, terminology and common hurdles.
--->
-
 !SLIDE
 # コースのゴール
 
 * Chefのツールと構造の理解
-* クックブックの改造、作成、取得。
-* Work with the Chef Server API
-* Understand common patterns used by Opscode
-* Understand Opscode's products
+* クックブックの改造、作成、取得
+* Chef Server APIでの操作
+* Opscodeが使っている一般的なパターンの理解
+* Opscodeの製品の理解
 
-Chef is a complex system and we could spend 2 weeks on it and not
-cover everything. This course aims to teach students the fundamentals
-and most important topics, terminology and common hurdles.
-
-<!--
-# Topics Not Covered
-
-We can't cover everything. Specifically, this course does not cover:
-
-* Direct comparison to other tools.
-* In depth details on advanced topics.
-* Discussion of application deployment strategies.
-* Setup/management of Open Source Chef Server.
--->
+Chefは非常に複雑なシステムです。たとえ２週間を使って解説しても全てをカバーすることは出来ないでしょう。
+このコースでは、参加者にChefの基礎と最も重要なトピックと技術、学習のための障害を説明することを目的としています。
 
 !SLIDE
-# Topics Not Covered
+# コースに含まれない項目
 
-We can't cover everything. Specifically, this course does not cover:
+全てをカバーすることはしません。特に下記の項目に関しては、このコースではカバーしません：
 
-* Direct comparison to other tools.
-* In depth details on advanced topics.
-* Discussion of application deployment strategies.
-* Setup/management of Open Source Chef Server.
+* 他のツールとの直接比較
+* 高度な機能の詳細
+* アプリケーションの開発の戦略の議論
+* オープンソースのChefサーバの設定と管理
 
-<!--
-# Learning Chef
+!SLIDE
+# Chefの学習
 
-This course is to facilitate learning Chef.
+このコースは、Chefの学習を促進することを目標にします。
 
-We will take frequent breaks and do several hands on exercises.
+このコースでは、頻繁に休憩して、多数のハンズオンを演習を実施増す。
 
-Please keep questions on topic for the section. Some questions will
-cover subject material that will be covered later.
+もしも各セクションのトッピックに関して質問がある場合は、しばらく我慢して質問を熟成してください。いくつかの質問は後のセクションの教材の中で答えが導かれることもあるはずです。
 
-Extensive or detailed questions can be answered at the end of the
-relevant section, day or at the end of the course.
+広範な又は詳細な質問は、関連するセクションの最後か、１日の終わりか、コースの終わりで回答することがでいます。
 
-.notes Strategies for breaks can include Pomodoros (25 mins w/ 5 min
-break), or simply running through each section.
--->
-
-# Learning Chef
-
-This course is to facilitate learning Chef.
-
-We will take frequent breaks and do several hands on exercises.
-
-Please keep questions on topic for the section. Some questions will
-cover subject material that will be covered later.
-
-Extensive or detailed questions can be answered at the end of the
-relevant section, day or at the end of the course.
-
-.notes Strategies for breaks can include Pomodoros (25 mins w/ 5 min
-break), or simply running through each section.
+.notes 休憩の方法は、 Pomodoros方式 (25 mins w/ 5 min
+break)か、それぞれのセクション単位で休憩する方式とする
 
 <!--
 # Agenda
@@ -139,7 +95,8 @@ later. Most of the sections have hands on exercises, and we provided
 systems to use.
 -->
 
-# Agenda
+!SLIDE
+# コースの学習項目
 
 * Introduction
 * Getting Started
@@ -169,7 +126,8 @@ Plugins, Reporting. This also may include questions asked during the
 course that have not been covered.
 -->
 
-# Agenda
+!SLIDE
+# コースの学習項目
 
 * Troubleshooting
 * Chef Node
@@ -194,7 +152,8 @@ At the end of the class you will have:
   as code with Chef
 -->
 
-# Course Artifacts
+!SLIDE
+# コース完了時に完成している構成
 
 At the end of the class you will have:
 
@@ -216,7 +175,8 @@ Best practices themselves are subjective.
 Chef is flexible and you can make it do almost anything you want.
 -->
 
-# About Best Practices
+!SLIDE
+# ベストプラクティスについて
 
 This course encompasses what we consider "best practices".
 
@@ -245,7 +205,7 @@ GitHub Repository:
 in Opscode open source projects such as cookbooks.
 -->
 
-# About the course materials
+# コースの教材について
 
 Opscode's Chef Fundamentals training materials are dual-licensed.
 
@@ -272,7 +232,7 @@ in Opscode open source projects such as cookbooks.
 introduced, let's introduce Chef.
 -->
 
-# Introduction to Chef
+# Chef入門
 
 * Configuration Management
 * System Integration
@@ -296,7 +256,7 @@ This is accomplished through a variety of methods.
 .notes Using an automated framework is why we're all here, after all.
 -->
 
-# Configuration Management
+# サーバ設定管理
 
 "Keep track of all the stuff you do to take a system from 'bare metal'
 to 'doing its job'." - Adam Jacob, Web Operations (O'Reilly, 2010)
@@ -317,7 +277,7 @@ We have computers sitting in a rack somewhere.
 <center><img src="../images/bare-metal.png" /></center>
 -->
 
-# Bare Metal
+# 物理的ハードウェア
 
 We have computers sitting in a rack somewhere.
 
@@ -332,7 +292,7 @@ somewhere.
 <center><img src="../images/bare-metal-cloud.png" /></center>
 -->
 
-# Bare Metal...Cloud?
+# 物理的ハードウェア...Cloud?
 
 Or, we have an idea of what computers we need running in a cloud
 somewhere.
@@ -348,7 +308,7 @@ their jobs.
 <center><img src="../images/doing-their-job.png" /></center>
 -->
 
-# Doing their Job
+# 各サーバの設定完了
 
 All the configuration management has been done, now they're doing
 their jobs.
@@ -368,7 +328,7 @@ They need to be integrated together.
 * Database servers are clustered for availability.
 -->
 
-# System Integration
+# システムのインテグレーション
 
 Systems simply running with the right software don't provide value to
 the business.
@@ -389,7 +349,7 @@ of their own - HA database.
 <center><img src="../images/integrated-systems.png" /></center>
 -->
 
-# System Integration
+# システムのインテグレーション
 
 In a typical architecture, this is complex. For example, our six
 systems talk to each other, and two of those are a complex subsystem
@@ -412,7 +372,7 @@ caching here, but wait, there's more:
 Don't forget monitoring and trending!
 -->
 
-# System Integration
+# システムのインテグレーション
 
 In modern infrastructures, applications are not simply "N-tier"
 architectures anymore. Other components are added. Additional services
